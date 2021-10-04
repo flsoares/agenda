@@ -19,3 +19,5 @@ class Evento(models.Model):
         return self.titulo   # porque nao falamos como o objeto sera tratado
                             # com o metodo __str__ sempre q for chamado o objeto
                             # titulo, o django trará o nome do titulo.
+    def get_data_evento(self):
+        return self.data_evento.strftime('%d/%m/%y %H %M Hrs')
